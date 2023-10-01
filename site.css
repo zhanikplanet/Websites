@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Добавим box-sizing для более предсказуемой верстки */
+}
+
+body {
+    font-family: 'Your Custom Font', sans-serif; /* Использование кастомного шрифта */
+}
+
+.NavigationMenu {
+    background-color: rgb(215, 212, 212);
+}
+.WelcomeText{
+    justify-content: center;
+}
+
+.nav {
+    justify-content: start;
+    display: flex;
+    padding-left: 200px;
+}
+
+.logo {
+    padding: 0;
+    margin-top: 0;
+}
+
+.nav a {
+    color: black;
+    /* Анимация при наведении на ссылки */
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: rgb(255, 0, 0); /* Изменить цвет при наведении */
+}
+
+hr {
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+}
+
+h1 {
+    padding-top: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+p {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.Main {
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.Members {
+    padding-left: 30px;
+}
+
+.card {
+    justify-content: center;
+    width: 18rem;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 70px;
+    vertical-align: top;
+}
+.videos{
+    border-top: 3px solid rgb(41, 58, 134);
+    border-bottom: 3px solid rgb(41, 58, 134);
+}
