@@ -1,11 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Добавим box-sizing для более предсказуемой верстки */
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Your Custom Font', sans-serif; /* Использование кастомного шрифта */
+    font-family: 'Your Custom Font', sans-serif;
 }
 
 .NavigationMenu {
@@ -28,12 +28,11 @@ body {
 
 .nav a {
     color: black;
-    /* Анимация при наведении на ссылки */
     transition: color 0.3s ease;
 }
 
 .nav a:hover {
-    color: rgb(255, 0, 0); /* Изменить цвет при наведении */
+    color: rgb(255, 0, 0);
 }
 
 hr {
