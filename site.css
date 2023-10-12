@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 400;
+    padding: 200;
     box-sizing: border-box;
 }
 
@@ -10,7 +10,7 @@ body {
 }
 
 .NavigationMenu {
-    background-color: #535293;
+    background-color: hsl(241, 28%, 59%);
     box-shadow: 1px 1px 10px 5px hsl(0, 0%, 12%);
 }
 .WelcomeText{
@@ -66,8 +66,8 @@ p {
     border-radius: 20px;
     padding: 0px 70px 0px 100px;
     margin-top: 20px;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: rgb(196,75,255);
+    background: radial-gradient(circle, rgba(196,75,255,1) 0%, rgba(255,255,255,1) 100%);
 }   
 
 .Members {
@@ -76,7 +76,6 @@ p {
 }
 
 .card {
-    justify-content: center;
     width: 18rem;
     display: inline-block;
     margin-right: 10px;
