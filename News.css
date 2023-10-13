@@ -1,0 +1,10 @@
+.icons{
+    padding-left: 87%;
+    display: inline-block;
+    width: 100%;
+    justify-content: end;
+}
+.icons img{
+    max-width: 30px;
+    cursor: pointer;
+}

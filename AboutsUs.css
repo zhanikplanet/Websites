@@ -1,4 +1,4 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
 }
@@ -12,9 +12,7 @@ body {
 .NavigationMenu {
     background-color: rgb(215, 212, 212);
 }
-.WelcomeText{
-    justify-content: center;
-}
+
 
 .nav {
     justify-content:center;
@@ -48,9 +46,7 @@ h1 {
     color: rgb(255, 255, 255);
 }
 
-h2 {
-    text-align: center;
-}
+
 
 h4 {
     text-align: center;
@@ -79,13 +75,6 @@ p {
     margin-left: 70px;
     vertical-align: top;
 }
-.videos{
-    border-top: 3px solid rgb(41, 58, 134);
-    border-bottom: 3px solid rgb(41, 58, 134);
-}
-footer{
-    width: 100%;
-}
 .icons{
     padding-left: 87%;
     display: inline-block;
@@ -97,4 +86,5 @@ footer{
     cursor: pointer;
 }
 
- */
+
+

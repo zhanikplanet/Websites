@@ -3,18 +3,14 @@
     padding: 0;
 }
 
-body {
-    font-family: 'Your Custom Font', sans-serif; 
-}
+
 
 
 
 .NavigationMenu {
     background-color: rgb(215, 212, 212);
 }
-.WelcomeText{
-    justify-content: center;
-}
+
 
 .nav {
     justify-content:center;
@@ -71,22 +67,14 @@ p {
     padding-left: 30px;
 }
 
-.card {
-    justify-content: center;
-    width: 18rem;
-    display: inline-block;
-    margin-right: 10px;
-    margin-left: 70px;
-    vertical-align: top;
-}
+
 .videos{
     border-top: 3px solid rgb(41, 58, 134);
     border-bottom: 3px solid rgb(41, 58, 134);
 }
-footer{
-    width: 100%;
-}
-.icons{
+
+ */
+ .icons{
     padding-left: 87%;
     display: inline-block;
     width: 100%;
@@ -96,5 +84,3 @@ footer{
     max-width: 30px;
     cursor: pointer;
 }
-
- */
