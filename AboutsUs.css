@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,700');
+
+body{
+    font-family: "Lato";
+    background-color: #F2F2F2;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+
+}
 * {
     margin: 0;
     padding: 0;
 }
-
-body {
-    font-family: 'Your Custom Font', sans-serif; 
-}
-
 
 
 .NavigationMenu {
@@ -74,7 +80,6 @@ p {
     margin-right: 10px;
     margin-left: 70px;
     vertical-align: top;
-    box-shadow: 0px 6px 10px 5px #4a433b;
 }
 .icons{
     padding-left: 87%;
@@ -87,5 +92,36 @@ p {
     cursor: pointer;
 }
 
+.navbar{
+    background-color: #333;
+ }
+.nav-link{
+    color: hsl(0, 0%, 77%) !important;
+}
+#navbarNav .nav-link:hover {
+    background-color: #FF7878; 
+    color:#333 !important;
+} 
+.btn-link {
+    color: #3f3f3f;
+}
 
+.btn-link:hover {
+    color: hsl(0, 0%, 61%);
+}
 
+.btn-primary:hover {
+    background-color:#FF7878; 
+    border-color: #FF7878; 
+    color: hsl(0, 0%, 16%);
+}
+.btn-primary {
+    background-color:#3f3f3f; 
+    border-color: #3f3f3f; 
+    color: #fff;
+}
+.card-body{
+        width: 18rem;
+        box-shadow: 1px 4px 4px 3px rgba(0, 0, 0, 0.2);
+    
+}
