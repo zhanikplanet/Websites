@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,700');
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family: "Lato";
     color: #373d42;
@@ -11,11 +16,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 
 }
-* {
-    margin: 0;
-    padding: 0;
-}
-
 
 .NavigationMenu {
     background-color: rgb(215, 212, 212);
@@ -65,7 +65,7 @@ p {
     color: rgb(0, 0, 0);
 }
 
-Main {
+.Main {
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.5);
 }
