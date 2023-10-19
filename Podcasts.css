@@ -31,3 +31,8 @@ nav {
     background-color: #FF7878; 
     color:#333 !important;
 }
+.carousel-inner img {
+    max-width: 50%; 
+    display: block;
+    margin: 0 auto;
+}
