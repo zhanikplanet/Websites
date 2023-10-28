@@ -18,7 +18,7 @@ function login() {
 
     if (localStorage.getItem(username) === password) {
         showMessage('Login successful. Welcome, ' + username + '!');
-        window.location.href = "/index.html";
+        window.location.href = "/Websites/Podcasts.html";
         removeMenuContent();
     } else {
         showMessage('Invalid username or password.');
