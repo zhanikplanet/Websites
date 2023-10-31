@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="site.css">
     <title>AITCAST</title>
 </head>
 <body>
     <div class="container-fluid">
-        <!-- Navigation Menu -->
+<div class="row">
+    <div class="col-12">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">
                 <img class="logo" src="J4KXXM01.svg" width="40" height="40" alt="">
@@ -37,9 +39,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownProfile">
-                            <a class="dropdown-item" href="#">Log In</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Registration</a>
+                            <a class="dropdown-item" href="login.html">Log In</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="">Settings</a>
                             <div class="dropdown-divider"></div>
@@ -49,10 +49,11 @@
                 </ul>
             </div>
         </nav>
-        
-        <!-- Main Content -->
+    </div>
+  </div>      
+    
         <div class="row">
-            <div class="col">
+            <div class="col-12">
                 <h2>AituPodcast</h2>
                 <p class="First">AituPodcast is a club at Astana IT University that produces podcasts on various topics with various guests...</p>
                 <hr>
@@ -63,15 +64,20 @@
             </div>
         </div>
         
-        <!-- Footer -->
-        <div class="row">
-            <div class="col">
+
+        <div class="row ">
+            <div class="col-12">
                 <footer>
                     <span> @Created by Zhankozy Sunkar Asel</span>
-                    <div class="icons">
-                        <img src="channels4_profile.jpg" alt="">
-                        <img src="channels4_profile.jpg" alt="">
-                        <img src="channels4_profile.jpg" alt="">
+                    <div class="icons" style="display: flex;
+                    justify-content: end;">
+                        <ul class="">
+                            <li><i class="fab fa-facebook-f"></i></li>
+                            <li><i class="fab fa-twitter"></i></li>
+                            <li><i class="fab fa-instagram"></i></li>
+                            <li><i class="fab fa-linkedin-in"></i></li>
+                            <li><i class="fab fa-youtube"></i></li>
+                         </ul>
                     </div>
                 </footer>
             </div>

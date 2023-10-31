@@ -1,98 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login and Registration</title>
-</head>
-<style>
-    body{
-        background-image: url("imgimg.jpg");
-    background-size: 100%;
-    }
-    .login-container{
-        width:40%;
-        display: flex;
-        flex-direction: row;
-        height:400px;
-       margin-left: 30%;
-       margin-top:250px;
-    }
-    .login-side{
-        background-color: rgb(230, 229, 229);
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        flex:1;
-        align-items: center;
-        
-    }
-    .login,.title,.login-button{
-       flex:1;
-    }
-    .login{
-        display: grid;
-        grid-template-rows: 40px 40px;
-       row-gap: 20px;
-    }
-    .registration-side{
-        flex:1;
-        box-shadow: 5px 5px 20px rgb(134, 133, 133);
-    }
-    #loginUsername,#loginPassword{
-        border: none;
-      
-    }
-    .login-button>button{
-        border:none;
-        height:48px;
-        width:136px;
-        border-radius: 35px;
-        background: linear-gradient(to bottom, #D5DEE7 100%, #E8EBF2 100%, #E2E7ED 50%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%); background-blend-mode: normal,color-burn;
-        font-size: 16px;
-        color: rgb(255, 255, 255);
-        margin-top: 20px;
-        cursor: pointer;
-    }
-    .title>h1{
-      margin-top: 40px;
-    }
-.button-div>a>button{
- 
-    border:none;
-    margin-top: 175px;
-    margin-left: 115px;
-        height:48px;
-        width:136px;
-        border-radius: 35px;
-        background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 0%, #E2E7ED 0%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%); background-blend-mode: normal,color-burn;
-        font-size: 16px;
-        color: white;
-        cursor: pointer;
-}
-</style>
-<body>
-    <div class="login-container">
-        <div class="login-side">
-            <div class="title"><h1>Login</h1></div>
-            <div class= "login">
-                <input type="text" id="loginUsername" placeholder="Username" required>
-        <input type="password" id="loginPassword" placeholder="Password" required>
-            </div>
-            <div class="login-button"><button type="button" onclick="login()">Login</button></div>
-          
-        </div>
-        <div class="registration-side">
-            <div class="button-div">
-               <a href="/Websites/registration.html"> <button>Registration</button></a>
-            </div>
-        </div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+
+    <link rel="stylesheet" href="Login.css">
+         
+    <title>Login & Registration Form</title> 
+</head>
+<body>
+    
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button Login">
+                        <input type="button" class="Login" value="Login ">
+                        <audio id="audioPlayer" src="sound.mp3"></audio>
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="#" class="text signup-link">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form signup">
+                <span class="title">Registration</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your name" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Create a password" required>
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Confirm a password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon">
+                            <label for="termCon" class="text">I accepted all terms and conditions</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field button Signup">
+                        <input type="button" class="Signup" value="Signup">
+                    </div>
+                </form> 
+
+                <div class="login-signup">
+                    <span class="text">Already a member?
+                        <a href="#" class="text login-link">Login Now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
 
-   
-
-
-    <p id="message"></p>
-
-    <script scr src="/Websites/jspart/login.js" ></script>
+     <script src="Login.js"></script> 
+     <!-- <script src="site.js"></script> -->
 </body>
 </html>
