@@ -5,7 +5,7 @@ const container = document.querySelector(".container"),
   login = document.querySelector(".login-link");
  const  logins = document.querySelector(".Login");
  const  signup= document.querySelector(".Signup");
- const audio=document.getElementById("audioPlayer");
+
 
 pwShowHide.forEach(eyeIcon => {
   eyeIcon.addEventListener("click", () => {
@@ -59,7 +59,6 @@ else{
   alert('password are not same')
 }
 }
-
 function userLogin() {
   const username = document.getElementById('getUsername').value;
   const userAccount= document.getElementById('loginUsername').value;
@@ -67,15 +66,19 @@ function userLogin() {
 
   if (localStorage.getItem(userAccount) === password&&localStorage.getItem(userAccount)!=='') {
   
-    alert('Login successful. Welcome, ' + username + '!');
-      window.location.href = "/Websites/Podcasts.html";
 
+    alert('Login successful. Welcome, ' + username + '!');
+    AuthFactory.signIn();
+    window.location.href = "/Websites/Podcasts.html";
   } 
  
   else {
+  
       alert('Invalid username or password.');
   }
 }
-
-
+let guest = document.getElementById("guest-view" )
+guest.addEventListener("click" ,()=>{
+AuthFactory.logout();
+})
 

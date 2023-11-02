@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-
+    <script src="./modules/authFactory.js"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
 
@@ -36,8 +36,8 @@
                             <input type="checkbox" id="logCheck">
                             <label for="logCheck" class="text">Remember me</label>
                         </div>
-                        
                         <a href="#" class="text">Forgot password?</a>
+                        <a id = "guest-view"href="index.html" class="text" >guest view?</a>
                     </div>
                         <div onclick="userLogin()">
                     <div class="input-field button Login" >
@@ -76,6 +76,7 @@
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
 
+
                     <div class="checkbox-text">
                         <div class="checkbox-content">
                             <input type="checkbox" id="termCon">
@@ -98,7 +99,8 @@
         </div>
     </div>
 
-     <script src="Login.js"></script> 
+    <script src="Login.js"></script> 
+     
 
 </body>
 </html>

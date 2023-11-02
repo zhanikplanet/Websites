@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
+    <script src="./modules/authFactory.js"></script>
+    <script src="addNews.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="News.css">
 </head>
@@ -55,11 +59,15 @@
     </div>
     
         <div class="row">
-            <div class="col-12">
+            <div id="add-button" class="col-12">
                 <h1>News</h1>
                 <hr>
                 <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ipsam autem quaerat natus, in amet repellendus iure consectetur, laudantium neque hic dolore quam quidem distinctio molestiae officiis exercitationem laboriosam tempora nisi soluta reprehenderit, inventore ducimus ratione? Quam mollitia hic cum blanditiis laboriosam, distinctio quae minus pariatur amet, minima, vel placeat optio nesciunt fuga consequatur odit rerum sit tempora autem facere. Quos et reiciendis minima voluptates, hic possimus amet sint eligendi dolorem suscipit, voluptas velit fugit id perspiciatis dicta incidunt distinctio rerum deleniti impedit explicabo facilis provident, asperiores quidem. Laboriosam, nobis quam dolorem quisquam exercitationem, minima molestias ipsum corporis soluta obcaecati quae, ad quasi cum sit assumenda. Quasi ipsam eligendi vitae assumenda, mollitia nulla aut illo. Porro ipsam, rem commodi rerum mollitia ex libero quam, molestias cupiditate sunt quibusdam reprehenderit sed id amet facere laudantium. Quos nisi natus provident consequuntur, commodi maiores! Quae cupiditate ut quo. Quasi reiciendis provident sapiente, dicta minima harum ratione aliquid quae fugit consequuntur repudiandae. Voluptates, maiores unde blanditiis delectus vero illum molestiae alias reiciendis architecto at neque quod, harum assumenda minus. Quia tenetur architecto numquam provident fugiat. Placeat eaque nemo cum sit porro repudiandae officia, corporis voluptatum. Optio alias numquam beatae ea temporibus fugit accusamus tempore quas pariatur ex magnam repellendus quibusdam non consequatur itaque, animi sit doloremque. Quidem dolorum voluptas unde necessitatibus, rerum tempora nulla amet illum in, quos temporibus distinctio maiores iste ex, ipsam alias enim quas quis perferendis veritatis minus quasi aperiam? Eius ratione exercitationem totam quo repellendus, doloremque dolores earum optio beatae natus minima quas nobis facilis perferendis quaerat corrupti fugiat nam consectetur laudantium culpa. Consequuntur quisquam repellendus est error, molestiae tenetur deserunt sapiente qui distinctio sequi earum laboriosam alias enim sit ullam amet odit, ex explicabo reiciendis! Officiis voluptas harum, libero reiciendis vel quisquam hic sint eum pariatur, debitis esse? Corrupti, dolorum. Unde incidunt vero in qui autem? Dolorum minus dicta in totam repellat non consequuntur architecto enim? Error reprehenderit facilis recusandae voluptates aspernatur cumque, deserunt ea aliquam deleniti. Repellat aut accusamus vitae laboriosam. Assumenda eum illum, dolore dolores at natus quasi rem illo error laborum, hic earum! Ratione enim incidunt odio laudantium suscipit a. Hic voluptatum dolor illum architecto dolorem amet laborum eligendi cum in, quis excepturi vitae ipsam eveniet et asperiores praesentium eius quidem tempora eaque natus fugit quae. Architecto suscipit soluta reiciendis aspernatur incidunt magni distinctio et, quia repellat cum, eligendi illum, ab accusamus facere sapiente. Ipsa nam nulla, aperiam minus laboriosam impedit laudantium inventore! Maxime doloremque aut rem neque cum eos, voluptates illum provident libero facilis officiis tempore, voluptatem placeat et! Recusandae vero molestias similique, eligendi fuga ipsum pariatur, aperiam ratione cum reiciendis rerum? In optio veritatis unde nihil repudiandae voluptate molestiae consequuntur eum repellat labore velit, incidunt corporis voluptatibus mollitia illum recusandae rem accusantium nemo harum magni ipsum iste. Voluptates fuga expedita veniam iste iusto obcaecati eveniet qui amet. Soluta porro magni sed ipsa error architecto quas dignissimos distinctio? Reprehenderit a possimus minus praesentium, in molestiae? Necessitatibus aperiam quam eaque fuga nulla quia veritatis eligendi neque!</p>
+                <button id="show-modal-button">add news</button>
+                <div id="news-container"></div>
+              
+
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ipsam autem quaerat natus, in amet repellendus iure consectetur, laudantium neque hic dolore quam quidem distinctio molestiae officiis exercitationem laboriosam tempora nisi soluta reprehenderit, inventore ducimus ratione? Quam mollitia hic cum blanditiis laboriosam, distinctio quae minus pariatur amet, minima, vel placeat optio nesciunt fuga consequatur odit rerum sit tempora autem facere. Quos et reiciendis minima voluptates, hic possimus amet sint eligendi dolorem suscipit, voluptas velit fugit id perspiciatis dicta incidunt distinctio rerum deleniti impedit explicabo facilis provident, asperiores quidem. Laboriosam, nobis quam dolorem quisquam exercitationem, minima molestias ipsum corporis soluta obcaecati quae, ad quasi cum sit assumenda. Quasi ipsam eligendi vitae assumenda, mollitia nulla aut illo. Porro ipsam, rem commodi rerum mollitia ex libero quam, molestias cupiditate sunt quibusdam reprehenderit sed id amet facere laudantium. Quos nisi natus provident consequuntur, commodi maiores! Quae cupiditate ut quo. Quasi reiciendis provident sapiente, dicta minima harum ratione aliquid quae fugit consequuntur repudiandae. Voluptates, maiores unde blanditiis delectus vero illum molestiae alias reiciendis architecto at neque quod, harum assumenda minus. Quia tenetur architecto numquam provident fugiat. Placeat eaque nemo cum sit porro repudiandae officia, corporis voluptatum. Optio alias numquam beatae ea temporibus fugit accusamus tempore quas pariatur ex magnam repellendus quibusdam non consequatur itaque, animi sit doloremque. Quidem dolorum voluptas unde necessitatibus, rerum tempora nulla amet illum in, quos temporibus distinctio maiores iste ex, ipsam alias enim quas quis perferendis veritatis minus quasi aperiam? Eius ratione exercitationem totam quo repellendus, doloremque dolores earum optio beatae natus minima quas nobis facilis perferendis quaerat corrupti fugiat nam consectetur laudantium culpa. Consequuntur quisquam repellendus est error, molestiae tenetur deserunt sapiente qui distinctio sequi earum laboriosam alias enim sit ullam amet odit, ex explicabo reiciendis! Officiis voluptas harum, libero reiciendis vel quisquam hic sint eum pariatur, debitis esse? Corrupti, dolorum. Unde incidunt vero in qui autem? Dolorum minus dicta in totam repellat non consequuntur architecto enim? Error reprehenderit facilis recusandae voluptates aspernatur cumque, deserunt ea aliquam deleniti. Repellat aut accusamus vitae laboriosam. Assumenda eum illum, dolore dolores at natus quasi rem illo error laborum, hic earum! Ratione enim incidunt odio laudantium suscipit a. Hic voluptatum dolor illum architecto dolorem amet laborum eligendi cum in, quis excepturi vitae ipsam eveniet et asperiores praesentium eius quidem tempora eaque natus fugit quae. Architecto suscipit soluta reiciendis aspernatur incidunt magni distinctio et, quia repellat cum, eligendi illum, ab accusamus facere sapiente. Ipsa nam nulla, aperiam minus laboriosam impedit laudantium inventore! Maxime doloremque aut rem neque cum eos, voluptates illum provident libero facilis officiis tempore, voluptatem placeat et! Recusandae vero molestias similique, eligendi fuga ipsum pariatur, aperiam ratione cum reiciendis rerum? In optio veritatis unde nihil repudiandae voluptate molestiae consequuntur eum repellat labore velit, incidunt corporis voluptatibus mollitia illum recusandae rem accusantium nemo harum magni ipsum iste. Voluptates fuga expedita veniam iste iusto obcaecati eveniet qui amet. Soluta porro magni sed ipsa error architecto quas dignissimos distinctio? Reprehenderit a possimus minus praesentium, in molestiae? Necessitatibus aperiam quam eaque fuga nulla quia veritatis eligendi neque!</p> -->
             </div>
         </div>
     
@@ -79,8 +87,18 @@
             </div>
         </div>
     </div>
+    <script defer>
+        console.log('Is user logged in', AuthFactory.loggedIn)
+        if (AuthFactory.loggedIn) {
+            showAdminUI();
+                }
+                else{
+                   let button = document.getElementById("show-modal-button");
+                   button.innerText = 'do add news u have to login'
+                }
+      
+    </script>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+   
 </body>
 </html>
