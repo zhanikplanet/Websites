@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-
+    <script src="./modules/authFactory.js"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
 
@@ -22,11 +22,11 @@
 
                 <form action="#">
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your email" required>
+                        <input id = "loginUsername" type="text" placeholder="Enter your account" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <input id="loginPassword" type="password" class="password" placeholder="Enter your password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -36,14 +36,15 @@
                             <input type="checkbox" id="logCheck">
                             <label for="logCheck" class="text">Remember me</label>
                         </div>
-                        
                         <a href="#" class="text">Forgot password?</a>
+                        <a id = "guest-view"href="index.html" class="text" >guest view?</a>
                     </div>
-
-                    <div class="input-field button Login">
-                        <input type="button" class="Login" value="Login ">
+                        <div onclick="userLogin()">
+                    <div class="input-field button Login" >
+                        <input type="button" class="Login" value="Login" >
                         <audio id="audioPlayer" src="sound.mp3"></audio>
                     </div>
+                </div>
                 </form>
 
                 <div class="login-signup">
@@ -58,22 +59,23 @@
 
                 <form action="#">
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your name" required>
+                        <input id="getUsername" type="text" placeholder="Enter your name" required>
                         <i class="uil uil-user"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your email" required>
+                        <input id="registerUsername" type="text" placeholder="Enter your account" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Create a password" required>
+                        <input id="registerPassword" type="password" class="password" placeholder="Create a password" required>
                         <i class="uil uil-lock icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Confirm a password" required>
+                        <input id="checkPassword" type="password" class="password" placeholder="Confirm a password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
+
 
                     <div class="checkbox-text">
                         <div class="checkbox-content">
@@ -81,10 +83,11 @@
                             <label for="termCon" class="text">I accepted all terms and conditions</label>
                         </div>
                     </div>
-
+                    <div onclick="register()">
                     <div class="input-field button Signup">
                         <input type="button" class="Signup" value="Signup">
                     </div>
+                </div>
                 </form> 
 
                 <div class="login-signup">
@@ -96,7 +99,8 @@
         </div>
     </div>
 
-     <script src="Login.js"></script> 
-     <!-- <script src="site.js"></script> -->
+    <script src="Login.js"></script> 
+     
+
 </body>
 </html>

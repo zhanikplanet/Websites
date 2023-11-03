@@ -73,14 +73,20 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 nav {
-    background-color: #333;
+    background-color: azure;
+    box-shadow: 1px 4px 4px 3px rgba(0, 0, 0, 0.2);
  }
 .nav-link{
-    color: hsl(0, 0%, 77%) !important;
+    color: #4d4d4d !important;
 }
 #navbarNav .nav-link:hover {
-    background-color: #FF7878; 
+    background-color: hwb(0 86% 8%); 
     color:#333 !important;
+} 
+
+.dropdown-menu{
+   background-color: hwb(180 93% 2%);
+ 
 }
 .carousel-inner img {
     max-width: 50%; 
