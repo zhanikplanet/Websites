@@ -81,4 +81,7 @@ let guest = document.getElementById("guest-view" )
 guest.addEventListener("click" ,()=>{
 AuthFactory.logout();
 })
-
+let loginSubmit = document.getElementById("login-submit");
+loginSubmit.addEventListener("keypress",()=>{
+  userLogin();
+})
