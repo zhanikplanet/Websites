@@ -1,45 +1,94 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,700');
 
-body{
-    font-family: "Lato";
-    color: #373d42;
-    background-image: url("imgimg.jpg");
-    background-size: 100%;
-    display: flex;
-    height: 100vh;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway";
-    font-weight: 300;
-
-}
- *{
-    margin: 0;
-    padding: 0;
+* {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-nav {
-    background-color: #333;
- }
-.nav-link {
-    color: hsl(0, 0%, 77%) !important; 
+body {
+    font-family: "Lato", sans-serif;
+    color: #373d42;
+    background-image: url("https://bengordonpalmbeach.com/wp-content/uploads/2021/04/055-pd-getting-and-being-guest.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    display:flex;
+  
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+}
+
+
+.nav-link {
+    color: hsl(0, 0%, 77%) !important;
+}
+
+
+.nav {
+  flex-direction: column;
+}
 #navbarNav .nav-link:hover {
-    background-color: #FF7878; 
-    color:#333 !important;
-} 
-.icons ul{
+    background-color: #FF7878;
+    color: #333 !important;
+}
+
+.navbar {
+   display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    z-index: 1;
+    padding-top: 20px;
+    background-color: #333;
+}
+#navbar.hidden {
+  color: red;
+  display: none;
+}
+
+#navMenu{
+  display: flex;
+}
+
+#navbar .nav-link {
+    padding: 10px;
+    text-align: left;
+}
+
+.nav-item i {
+  font-size: 45px; 
+  margin-right: 8px;
+}
+.navbar{
+  display:flex;
+  flex-direction: row;
+}
+.navbar i{
+  font-size: 24px;
+}
+
+
+
+
+.main {
+    margin-left: 250px;
+    padding: 15px;
+}
+
+.icons ul {
     display: flex;
-  }
-.icons ul li{
+    justify-content: flex-end;
+}
+
+.icons ul li {
     position: relative;
-    display: block;
+    display: block !important;
     color: #666;
     font-size: 30px;
     height: 60px;
@@ -49,91 +98,143 @@ nav {
     border-radius: 50%;
     margin: 0 15px;
     cursor: pointer;
-    transition: .5s;
-  }
-.icons  ul li:before{
+    transition: 0.5s;
+}
+
+.icons ul li:before {
     position: absolute;
     content: '';
     top: 0;
     left: 0;
     height: inherit;
     width: inherit;
-    /* background: #d35400; */
     border-radius: 50%;
-    transform: scale(.9);
+    transform: scale(0.9);
     z-index: -1;
-    transition: .5s;
-  }
-.icons  ul li:nth-child(1):before{
+    transition: 0.5s;
+}
+
+.icons ul li:nth-child(1):before {
     background: #4267B2;
-  }
-.icons  ul li:nth-child(2):before{
+}
+
+.icons ul li:nth-child(2):before {
     background: #1DA1F2;
-  }
-.icons  ul li:nth-child(3):before{
+}
+
+.icons ul li:nth-child(3):before {
     background: #E1306C;
-  }
-.icons  ul li:nth-child(4):before{
+}
+
+.icons ul li:nth-child(4):before {
     background: #2867B2;
-  }
-.icons  ul li:nth-child(5):before{
+}
+
+icons ul li:nth-child(5):before {
     background: #ff0000;
-  }
-.icons  ul li:hover:before{
+}
+
+.icons ul li:hover:before {
     filter: blur(3px);
     transform: scale(1.2);
-    /* box-shadow: 0 0 15px #d35400; */
-  }
-.icons  ul li:nth-child(1):hover:before{
+}
+
+icons ul li:nth-child(1):hover:before {
     box-shadow: 0 0 15px #4267B2;
-  }
-.icons  ul li:nth-child(2):hover:before{
+}
+
+icons ul li:nth-child(2):hover:before {
     box-shadow: 0 0 15px #1DA1F2;
-  }
-.icons  ul li:nth-child(3):hover:before{
+}
+
+icons ul li:nth-child(3):hover:before {
     box-shadow: 0 0 15px #E1306C;
-  }
-.icons  ul li:nth-child(4):hover:before{
+}
+
+icons ul li:nth-child(4):hover:before {
     box-shadow: 0 0 15px #2867B2;
-  }
-  ul li:nth-child(5):hover:before{
+}
+
+ul li:nth-child(5):hover:before {
     box-shadow: 0 0 15px #ff0000;
-  }
-.icons  ul li:nth-child(1):hover{
+}
+
+.icons ul li:nth-child(1):hover {
     color: #456cba;
     box-shadow: 0 0 15px #4267B2;
     text-shadow: 0 0 15px #4267B2;
-  }
- .icons ul li:nth-child(2):hover{
+}
+
+.icons ul li:nth-child(2):hover {
     color: #26a4f2;
     box-shadow: 0 0 15px #1DA1F2;
     text-shadow: 0 0 15px #1DA1F2;
-  }
- .icons ul li:nth-child(3):hover{
+}
+
+.icons ul li:nth-child(3):hover {
     color: #e23670;
     box-shadow: 0 0 15px #E1306C;
     text-shadow: 0 0 15px #E1306C;
-  }
-.icons  ul li:nth-child(4):hover{
+}
+
+icons ul li:nth-child(4):hover {
     color: #2a6cbb;
     box-shadow: 0 0 15px #2867B2;
     text-shadow: 0 0 15px #2867B2;
-  }
-.icons  ul li:nth-child(5):hover{
+}
+
+icons ul li:nth-child(5):hover {
     color: #ff1a1a;
     box-shadow: 0 0 15px #ff0000;
     text-shadow: 0 0 15px #ff0000;
-  }
-footer  .icons{
-display: flex;
-justify-content: end;
 }
-footer span{
+
+footer .icons {
     display: flex;
-    justify-content: start;
-    
-    
+  
+}
+
+footer span {
+    display: flex;
+
+}
+footer a{
+  color:white;
+}
+footer a:hover{
+  color:red
+}
+.scale-up-center {
+  animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 
- 
+
+ @-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+  }
+}
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+  }
+}
+
+
+.slide-fwd-center {
+	-webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
