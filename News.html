@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
-    <script src="./modules/authFactory.js"></script>
-    <script src="addNews.js"></script>
+    <script src="./modules/authFactory.js"></script> 
+    <script src="addNews.js" defer></script>
+   
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous" defer></script>
     
@@ -22,7 +23,6 @@
   
                 <div class="NavigationMenu sticky-top bg-dark">
                     <div class="navbar" id="navbar">
-                        <div class="menu-icon" id="menuIcon">&#9776;</div> 
                         <ul class="nav nav-tabs nav-justified" id="navMenu">
                             <li class="nav-item">
                                 <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i></a>
@@ -30,9 +30,6 @@
                             <li class="nav-item">
                                 <a href="login.html" class="nav-link"><i class="fa-solid fa-arrow-right-to-bracket slide-fwd-center"></i></a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a href="registratio.html" class="nav-link"><i class="fa-solid fa-user-plus slide-fwd-center"></i> </a>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -40,7 +37,7 @@
     </div>
     
         <div class="row">
-            <div id="add-button" class="col-12">
+            <div id="add-button" class="col-12 main">
                 <h1>News</h1>
                 <hr>
                 <br>

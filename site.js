@@ -26,3 +26,16 @@ function toggleNavMenu() {
         navbar.style.display = "flex";
     }
 }
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > lastScrollTop) {
+        // Прокрутка вниз
+        document.querySelector("footer").classList.remove("hidden");
+    } else {
+        // Прокрутка вверх
+        document.querySelector("footer").classList.add("hidden");
+    }
+    lastScrollTop = currentScroll;
+});

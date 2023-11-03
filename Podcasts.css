@@ -97,6 +97,9 @@ nav {
     display: flex;
     justify-content: flex-end;
 }
+.main{
+    padding-left: 150px;
+}
 
 .icons ul li {
     position: relative;
@@ -200,7 +203,19 @@ icons ul li:nth-child(5):hover {
     box-shadow: 0 0 15px #ff0000;
     text-shadow: 0 0 15px #ff0000;
 }
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    transition: transform 0.3s; /* Анимация для плавности движения */
+}
 
+footer.hidden {
+    transform: translateY(100%); /* Перемещает футер вниз */
+}
 footer .icons {
     display: flex;
   
