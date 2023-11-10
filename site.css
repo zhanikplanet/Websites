@@ -200,7 +200,6 @@ icons ul li:nth-child(5):hover {
 footer {
   position: fixed;
   bottom: 0;
-  height: 150px; 
   width: 100%;
   background-color: #333;
   padding: 20px;
