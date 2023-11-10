@@ -29,9 +29,9 @@ function addNewsToContainer(title, content) {
   timeElement.innerText = time;
   newsDiv.appendChild(timeElement);
 
-  // 将 news div 添加到容器
   const newsContainer = document.getElementById("news-container");
   newsContainer.appendChild(newsDiv);
+  // 添加类以触发动画
 }
 
 function showAdminUI() {
@@ -77,12 +77,36 @@ icons.forEach((icon) => {
   });
 });
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    toggleNavMenu();
+const sidebar = document.getElementById("side-bar");
+
+// document.addEventListener("keydown", function (event) {
+//   if (event.key === "s") {
+//     toggleSidebar();
+//   }
+// });
+
+// function toggleSidebar() {
+//   sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+// }
+document.addEventListener("mousemove", function (event) {
+  const mouseX = event.clientX;
+
+  const threshold = 200;
+
+  if (mouseX <= threshold) {
+    showSidebar();
+  } else {
+    hideSidebar();
   }
 });
 
+function showSidebar() {
+  sidebar.style.left = "0";
+}
+
+function hideSidebar() {
+  sidebar.style.left = "-250px";
+}
 function toggleNavMenu() {
   console.log("Success");
   if (navbar.style.display === "flex") {

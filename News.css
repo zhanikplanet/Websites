@@ -10,23 +10,30 @@ body {
 
 .nav {
   flex-direction: column;
+  gap: 40px;
 }
 #navbarNav .nav-link:hover {
   background-color: #ff7878;
   color: #333 !important;
 }
-
-.navbar {
+#side-bar {
   display: flex;
   position: fixed;
+  flex-direction: column;
+  gap: 30px;
   top: 0;
-  left: 0;
-  height: 100%;
-  width: 100px;
+  left: -250px;
+  width: 120px;
+  height: 100vh;
+  background-color: #333 !important;
+  transition: left 0.3s ease;
   z-index: 1;
   padding-top: 20px;
-  background-color: #333;
+
+  justify-content: center;
+  align-items: center;
 }
+
 #navbar.hidden {
   color: red;
   display: none;
@@ -237,4 +244,19 @@ footer a:hover {
 #news-container div {
   background-color: rgb(248, 185, 66);
   width: 70%;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#side-bar {
+  animation: slideInLeft 0.5s ease-in-out;
 }
