@@ -1,95 +1,106 @@
+function getCurrentTime() {
+  const currentDate = new Date();
 
-    function showAdminUI() {
-     const showModalButton = document.getElementById('show-modal-button');
-        
+  const month = (currentDate.getMonth() + 1).toString().padStart(2, "0"); // Months are zero-based
+  const day = currentDate.getDate().toString().padStart(2, "0");
+  const hours = currentDate.getHours().toString().padStart(2, "0");
+  const minutes = currentDate.getMinutes().toString().padStart(2, "0");
 
-     const modal = document.createElement('div');
-     modal.className = 'modal';
-     modal.innerHTML = `
-         <div class="modal-content">
-             <span class="close" id="close-modal-button">&times;</span>
-             <h2>Add News</h2>
-             <input type="text" id="news-title" placeholder="News Title">
-             <textarea id="news-content" placeholder="News Content"></textarea>
-             <button id="add-news-button">Add News</button>
-         </div>
-     `;
+  return `${month}-${day} ${hours}:${minutes}`;
+}
 
+function addNewsToContainer(title, content) {
+  const newsDiv = document.createElement("div");
+  newsDiv.id = "news";
 
-     document.body.appendChild(modal);
+  const titleElement = document.createElement("h3");
+  titleElement.innerText = title;
+  newsDiv.appendChild(titleElement);
 
-     const closeModalButton = document.getElementById('close-modal-button');
-     const addNewsButton = document.getElementById('add-news-button');
-     const newsTitleInput = document.getElementById('news-title');
-     const newsContentInput = document.getElementById('news-content');
-     
+  const contentElement = document.createElement("p");
+  contentElement.id = "content";
+  contentElement.innerText = content;
+  newsDiv.appendChild(contentElement);
 
-     showModalButton.addEventListener('click', () => {
-         modal.style.display = 'block';
-     });
+  const time = getCurrentTime();
 
-   
-     closeModalButton.addEventListener('click', () => {
-         modal.style.display = 'none';
-     });
+  const timeElement = document.createElement("p");
+  timeElement.id = "time";
+  timeElement.innerText = time;
+  newsDiv.appendChild(timeElement);
 
-     addNewsButton.addEventListener('click', () => {
-         const title = newsTitleInput.value;
-         const content = newsContentInput.value;
-         
-         if (title && content) {
-   
-             const newsElement = document.createElement('div');
-             newsElement.innerHTML = `<h3>${title}</h3><p>${content}</p>`;
-             const newsContainer = document.getElementById('news-container');
-             newsContainer.appendChild(newsElement);
-             
-            
-             newsTitleInput.value = '';
-             newsContentInput.value = '';
-      
-             modal.style.display = 'none';
-         }
-     });
+  // 将 news div 添加到容器
+  const newsContainer = document.getElementById("news-container");
+  newsContainer.appendChild(newsDiv);
+}
+
+function showAdminUI() {
+  const showModalButton = document.getElementById("show-modal-button");
+
+  const closeModalButton = document.getElementById("close-modal-button");
+  const addNewsButton = document.getElementById("add-news-button");
+  const newsTitleInput = document.getElementById("news-title");
+  const newsContentInput = document.getElementById("news-content");
+  const modalMain = document.getElementById("main-play");
+
+  showModalButton.addEventListener("click", () => {
+    modalMain.style.display = "flex";
+  });
+
+  closeModalButton.addEventListener("click", () => {
+    modalMain.style.display = "none";
+  });
+
+  addNewsButton.addEventListener("click", () => {
+    const title = newsTitleInput.value;
+    const content = newsContentInput.value;
+
+    if (title && content) {
+      addNewsToContainer(title, content);
+      newsTitleInput.value = "";
+      newsContentInput.value = "";
+
+      modal.style.display = "none";
     }
-    const navbar = document.getElementById("navbar");
+  });
+}
+const navbar = document.getElementById("navbar");
 const icons = document.querySelectorAll(".nav-item i, .footer i");
 
 icons.forEach((icon) => {
-    icon.addEventListener("mouseover", function () {
-        icon.classList.add("slide-fwd-center");
-    });
+  icon.addEventListener("mouseover", function () {
+    icon.classList.add("slide-fwd-center");
+  });
 
-    icon.addEventListener("mouseout", function () {
-        icon.classList.remove("slide-fwd-center");
-    });
+  icon.addEventListener("mouseout", function () {
+    icon.classList.remove("slide-fwd-center");
+  });
 });
 
 document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-        toggleNavMenu();
-       
-    }
+  if (event.key === "Escape") {
+    toggleNavMenu();
+  }
 });
 
 function toggleNavMenu() {
-     console.log("Success");
-    if (navbar.style.display === "flex") {
-        navbar.style.display = "none";
-    } else {
-        navbar.style.display = "flex";
-    }
+  console.log("Success");
+  if (navbar.style.display === "flex") {
+    navbar.style.display = "none";
+  } else {
+    navbar.style.display = "flex";
+  }
 }
 let lastScrollTop = 0;
 
-window.addEventListener("scroll", function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll > lastScrollTop) {
-        // Прокрутка вниз
-        document.querySelector("footer").classList.remove("hidden");
-    } else {
-        // Прокрутка вверх
-        document.querySelector("footer").classList.add("hidden");
-    }
-    lastScrollTop = currentScroll;
+window.addEventListener("scroll", function () {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  if (currentScroll > lastScrollTop) {
+    // Прокрутка вниз
+    document.querySelector("footer").classList.remove("hidden");
+  } else {
+    // Прокрутка вверх
+    document.querySelector("footer").classList.add("hidden");
+  }
+  lastScrollTop = currentScroll;
 });
