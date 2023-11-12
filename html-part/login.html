@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="./modules/authFactory.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <link rel="stylesheet" href="/css-part/Login.css" />
+
+    <title>Login & Registration Form</title>
+  </head>
+  <body>
+    <div id="start-tag">
+      <h1>AITU PODCAST</h1>
+    </div>
+
+    <div class="container">
+      <div class="forms">
+        <div class="form login">
+          <span class="title">Login</span>
+
+          <form action="#">
+            <div class="input-field">
+              <input
+                id="loginUsername"
+                type="text"
+                placeholder="Enter your account"
+                required
+              />
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                id="loginPassword"
+                type="password"
+                class="password"
+                placeholder="Enter your password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck" />
+                <label for="logCheck" class="text">Remember me</label>
+              </div>
+              <a href="#" class="text">Forgot password?</a>
+              <a id="guest-view" href="index.html" class="text">guest view?</a>
+            </div>
+            <div id="login-submit" onclick="">
+              <div class="input-field button Login">
+                <input type="button" class="Login" value="Login" />
+                <!-- <audio id="audioPlayer" src="sound.mp3"></audio> -->
+              </div>
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Not a member?
+              <a href="#" class="text signup-link">Signup Now</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="form signup">
+          <span class="title">Registration</span>
+
+          <form action="#">
+            <div class="input-field">
+              <input
+                id="getUsername"
+                type="text"
+                placeholder="Enter your name"
+                required
+              />
+              <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+              <input
+                id="registerUsername"
+                type="text"
+                placeholder="Enter your account"
+                required
+              />
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                id="registerPassword"
+                type="password"
+                class="password"
+                placeholder="Create a password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                id="checkPassword"
+                type="password"
+                class="password"
+                placeholder="Confirm a password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="termCon" />
+                <label for="termCon" class="text"
+                  >I accepted all terms and conditions</label
+                >
+              </div>
+            </div>
+            <div onclick="">
+              <div class="input-field button Signup">
+                <input type="button" class="Signup" value="Signup" />
+              </div>
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Already a member?
+              <a href="#" class="text login-link">Login Now</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js-part/Login.js"></script>
+  </body>
+</html>
